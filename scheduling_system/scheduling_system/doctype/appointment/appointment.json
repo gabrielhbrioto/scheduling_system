@@ -2,13 +2,14 @@
  "actions": [],
  "allow_rename": 1,
  "creation": "2025-02-13 23:29:48.566470",
+ "default_view": "Calendar",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "appointment_section",
-  "client_name",
-  "start_date",
-  "end_date",
+  "title",
+  "start",
+  "end",
   "duration",
   "description",
   "seller",
@@ -19,26 +20,6 @@
    "fieldname": "appointment_section",
    "fieldtype": "Section Break",
    "label": "Appointment"
-  },
-  {
-   "fieldname": "client_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Client Name",
-   "reqd": 1
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Datetime",
-   "in_list_view": 1,
-   "label": "Start Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Datetime",
-   "label": "End Date",
-   "read_only": 1
   },
   {
    "fieldname": "duration",
@@ -63,15 +44,36 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Stauts",
+   "label": "Status",
    "options": "Scheduled\nFinished\nCanceled",
    "reqd": 1,
    "sort_options": 1
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Datetime",
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2025-02-14 22:27:18.075653",
+ "modified": "2025-02-16 16:34:54.854740",
  "modified_by": "Administrator",
  "module": "Scheduling System",
  "name": "Appointment",
